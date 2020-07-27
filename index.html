@@ -1,22 +1,27 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
     <style>
       /* GLOBAL STYLES */
       body {
         background: #333;
-        padding-top: 20em;
+
         display: flex;
         justify-content: center;
       }
 
       /* DEMO-SPECIFIC STYLES */
       .typewriter h1 {
-        color: #fff;
+        color: rgb(107, 104, 104);
         font-family: monospace;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: 0.15em solid orange; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        margin: auto; /* Gives that scrolling effect as the typing happens */
         letter-spacing: 0.15em; /* Adjust as needed */
         animation: typing 3.5s steps(30, end),
           blink-caret 0.5s step-end infinite;
@@ -42,54 +47,66 @@
           border-color: orange;
         }
       }
+
       body {
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        width: 10%;
-        height: 50vh;
-        background-color: ##333;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100vh;
+        width: 100vw;
+        margin: -8px;
+        background: #e0e5ec;
       }
-      .icon {
-        padding: 20px;
-        animation: icon3d 200ms 10;
-        color: #fff;
+
+      .frame {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        width: 350px;
+        position: relative;
+        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+          7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001,
+          inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001,
+          inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+        transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+        border-radius: 10px;
       }
-      .icon:hover {
-        animation: icon3d 200ms infinite;
+
+      .btn {
+        height: 35px;
+        width: 35px;
+        border-radius: 3px;
+        background: #e0e5ec;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+          7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001,
+          inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001,
+          inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+        transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+        font-size: 16px;
+        color: rgba(42, 52, 84, 1);
+        text-decoration: none;
       }
-      @keyframes icon3d {
-        0% {
-          text-shadow: 5px 4px rgba(244, 67, 54, 1),
-            -5px -6px rgba(33, 150, 243, 1);
-        }
-        25% {
-          text-shadow: -5px -6px rgba(244, 67, 54, 1),
-            5px 4px rgba(33, 150, 243, 1);
-        }
-        50% {
-          text-shadow: 5px -4px rgba(244, 67, 54, 1),
-            -8px 4px rgba(33, 150, 243, 1);
-        }
-        75% {
-          text-shadow: -8px -4px rgba(244, 67, 54, 1),
-            -5px -4px rgba(33, 150, 243, 1);
-        }
-        100% {
-          text-shadow: -5px 0 rgba(244, 67, 54, 1),
-            5px -4px rgba(33, 150, 243, 1);
-        }
+      .btn:active {
+        box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+          -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+          inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+          inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+      }
+      .Container2 {
+        padding: 5em;
       }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
+
   <body>
     <div class="container">
       <div class="typewriter">
@@ -97,24 +114,28 @@
           Portfolio is under Development
         </h1>
       </div>
-
-      <a href="https://www.facebook.com/sriharsha150"
-        ><i class="fa fa-facebook fa-4x icon"></i
-      ></a>
-      <a href="https://twitter.com/HarshaGouru"
-        ><i class="fa fa-twitter fa-4x icon"></i
-      ></a>
-      <a href="https://www.instagram.com/harsha_gouru/"
-        ><i class="fa fa-instagram fa-4x icon"></i
-      ></a>
-      <a href="https://codepen.io/sriharsha150"
-        ><i class="fa fa-codepen fa-4x icon"></i
-      ></a>
-      <a href="https://www.youtube.com"
-        ><i class="fa fa-youtube fa-4x icon"></i
-      ></a>
+    </div>
+    <div class="Container2">
+      <div class="frame">
+        <a href="#" class="btn">
+          <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+        </a>
+        <a href="#" class="btn">
+          <i class="fab fa-twitter" style="color: #00acee;"></i>
+        </a>
+        <a href="#" class="btn">
+          <i class="fab fa-dribbble" style="color: #ea4c89;"></i>
+        </a>
+        <a href="https://www.linkedin.com/feed/" class="btn">
+          <i class="fab fa-linkedin-in" style="color: #0e76a8;"></i>
+        </a>
+        <a href="#" class="btn">
+          <i class="fab fa-get-pocket" style="color: #ee4056;"></i>
+        </a>
+        <a href="#" class="btn">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
     </div>
   </body>
 </html>
-
-
